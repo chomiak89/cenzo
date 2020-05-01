@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel|Comfortaa&display=swap");
+
+body,
+html {
+  background-color: #f8f8f6;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.hero-container {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img {
+  width: 700px;
+  height: 800px;
+  margin: 0 auto;
+  position: relative;
+  top: 20%;
+  transition: opacity 3s;
+  opacity: 0;
+}
+.hero-img-playing {
+  opacity: 1;
+}
+
+.hero-name {
+  float: left;
+  position: relative;
+  top: -18%;
+  left: 20%;
+  font-family: "Cinzel", serif;
+  font-size: 1.5em;
+  transition: opacity 2s 1500ms;
+  opacity: 0;
+}
+.hero-name-playing {
+  opacity: 1;
+}
+
+.hero-links {
+  float: right;
+  position: relative;
+  top: -15%;
+  right: 27%;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.5em;
+}
+.hero-links ul {
+  list-style-type: none;
+}
+.hero-links ul li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+#hero-link-1,
+#hero-link-2,
+#hero-link-3 {
+  opacity: 0;
+}
+#hero-link-1 {
+  transition: opacity 500ms 2000ms;
+}
+#hero-link-2 {
+  transition: opacity 500ms 2500ms;
+}
+#hero-link-3 {
+  transition: opacity 500ms 3000ms;
+}
+#hero-link-1.hero-link-playing,
+#hero-link-2.hero-link-playing,
+#hero-link-3.hero-link-playing {
+  opacity: 1;
+}
+
+/* MENU BUTTON ANIMATION ON HOVER */
+.menu-div {
+  position: relative;
+}
+.menu-div a:after {
+  position: absolute;
+  left: 0;
+  transition: transform 500ms, color 500ms, opacity 400ms;
+  opacity: 0;
+}
+
+#hero-link-1 .menu-div a:after {
+  content: "lavori";
+}
+#hero-link-2 .menu-div a:after {
+  content: "cessi";
+}
+#hero-link-3 .menu-div a:after {
+  content: "arte";
+}
+
+#hero-link-1 .menu-div a:hover:after,
+#hero-link-2 .menu-div a:hover:after,
+#hero-link-3 .menu-div a:hover:after {
+  cursor: pointer;
+  transform: translateY(25px) scale(1, -1);
+  color: gray;
+  opacity: 1;
+}

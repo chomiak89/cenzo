@@ -109,3 +109,18 @@ a {
   color: gray;
   opacity: 1;
 }
+
+@media screen and (max-width: 1920px) {
+  .hero-img {
+    top: 10%;
+    width: 600px;
+  }
+  .hero-name {
+    top: -44%;
+    left: 15%;
+  }
+  .hero-links {
+    top: -40%;
+    right: 18%;
+  }
+}
